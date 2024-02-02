@@ -10,19 +10,23 @@ namespace Fatorial{
 
             string num = Console.ReadLine();
 
-            int numConvert = Convert.ToInt32(num);
+            long numConvert = Convert.ToInt32(num);
+
             
-            int numProIndex = numConvert - 1;
+            
+            long numProIndex = numConvert - 1;
+            int numProIndex2 = Convert.ToInt32(numProIndex);
 
             //esta multiplicando até que chegue igual a um 
-            for(int index = numProIndex; index > 0 ; index --){
+            for(int index = numProIndex2; index > 0 ; index --){
 
                 //resultado da soma anterior
-                int resultado =  numConvert * index;
+                long resultado =  numConvert * index;
                 numConvert = resultado;
 
-                Console.WriteLine(numConvert);
+                
             }
+            Console.WriteLine(numConvert);
         }
     }
 }
